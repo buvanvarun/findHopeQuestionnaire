@@ -17,7 +17,7 @@
 
     function displayQuestions() {
         if (ch < 9) {
-            document.getElementById('q').innerHTML = questions[ch];
+            document.getElementById('q').innerHTML = `<span class="anim">` + questions[ch] + `</span>`;
             ch++;
         } else {
             displayResult(depressionCount);
@@ -67,3 +67,12 @@ function displayResult(s) {
     document.getElementById('r').innerHTML = "Result:\n" + str;
     console.log(s);
 }
+
+$(document).ready(function () {
+    var controller = new ScrollMagic.Controller();
+    var scene0 = new ScrollMagic.Scene({
+            triggerElement: "#container2"
+        })
+        .setClassToggle("#o1", "comeup")
+        .addTo(controller);
+})

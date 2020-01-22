@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Circular";
+    src: url("./Circular\ Std\ Book.otf");
+    src: local("Circular"), local("Circular"),
+        url("./Circular\ Std\ Book.otf") format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,10 +39,28 @@
     margin-right: 15px;
 }
 
+.anim {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .q {
-    font-family: sans-serif;
+    font-family: 'VT323',
+        monospace;
     font-size: 35px;
     font-weight: 300;
+    margin-right: 10px;
 }
 
 .options {
@@ -55,7 +80,8 @@
     transform: translatex(-50%);
     top: -50px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: 'VT323',
+        monospace;
     color: black;
     background-color: transparent;
     border: 3px #70db70 solid;
@@ -70,7 +96,7 @@
     transform: translatex(-50%);
     top: -30px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: Circular;
     color: black;
     border: 3px #70db70 solid;
     background-color: transparent;
@@ -85,7 +111,7 @@
     transform: translatex(-50%);
     top: -10px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: circular;
     color: black;
     border: 3px #70db70 solid;
     background-color: transparent;
@@ -100,7 +126,7 @@
     transform: translatex(-50%);
     top: 10px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: circular;
     color: black;
     border: 3px #70db70 solid;
     background-color: transparent;
@@ -108,6 +134,22 @@
 
 .o1:active {
     background-color: #70db70;
+    color: white;
+}
+
+.o2:active {
+    background-color: #70db70;
+    color: white;
+}
+
+.o3:active {
+    background-color: #70db70;
+    color: white;
+}
+
+.o4:active {
+    background-color: #70db70;
+    color: white;
 }
 
 .res {
